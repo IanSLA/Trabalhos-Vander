@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Gestão</h1>
+        <p>Cadastro e Visualização de Dados</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#dados">Dados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="cadastro">
+
+            <h2>Cadastro de Cliente</h2>
+
+            <form id="formCadastro" novalidate>
+
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome">
+                    <span class="erro" id="erroNome"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite o e-mail">
+                    <span class="erro" id="erroEmail"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000">
+                    <span class="erro" id="erroTelefone"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="00000-000"
+                        maxlength="9">
+                    <span class="erro" id="erroCep"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="logradouro">Rua</label>
+                    <input
+                        type="text"
+                        id="logradouro"
+                        name="logradouro"
+                        readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input
+                        type="text"
+                        id="bairro"
+                        name="bairro"
+                        readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="uf">Estado</label>
+                    <input
+                        type="text"
+                        id="uf"
+                        name="uf"
+                        readonly>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+
+                <p id="mensagem" class="mensagem"></p>
+
+            </form>
+
+        </section>
+
+        <section id="dados">
+
+            <h2>Clientes Cadastrados</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Cidade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaClientes">
+
+                    <tr>
+                        <td>Rafael Martins</td>
+                        <td>Rafa@email.com</td>
+                        <td>(11) 99999-9999</td>
+                        <td>São Paulo</td>
+                    </tr>
+
+                    <tr>
+                        <td>Paulo Tomas</td>
+                        <td>PauloT@email.com</td>
+                        <td>(21) 98888-8888</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido para a disciplina de Desenvolvimento Web.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
