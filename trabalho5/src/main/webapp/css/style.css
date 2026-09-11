@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+    min-height: 100vh;
+}
+
+.topo {
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 6%;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.container {
+    width: min(100% - 32px, 760px);
+    margin: 48px auto;
+}
+
+.card {
+    background: white;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+
+.card h1 {
+    margin-bottom: 14px;
+}
+
+.card p {
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.form-card {
+    max-width: 520px;
+    margin: auto;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 3px solid rgba(0, 123, 255, .2);
+    border-color: #555;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 18px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: .88;
+}
+
+.secundario {
+    background: #555;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.erro {
+    background: #f9dddd;
+    color: #7b1111;
+}
+
+.sucesso {
+    background: #dff3df;
+    color: #185c18;
+}
+
+.link-area {
+    margin-top: 18px;
+}
+
+.link-area a {
+    color: #111;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #e8e8e8;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .topo {
+        padding: 14px 20px;
+    }
+
+    .container {
+        width: min(100% - 24px, 760px);
+        margin: 24px auto;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .topo .btn {
+        margin-top: 0;
+    }
+}
